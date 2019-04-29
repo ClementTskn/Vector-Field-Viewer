@@ -193,12 +193,15 @@ else:
 
 # Update Cartesian
 def update_field(equation1, equation2, p, autosize):
+
     if p:
+        print("Vr = "+equation1+"\nVth = "+equation2)
         edit_vector_field.edit_vr_func(equation1)
         edit_vector_field.edit_vth_func(equation2)
         importlib.reload(vitr)
         importlib.reload(vitth)
     else:
+        print("Vx = "+equation1+"\nVy = "+equation2)
         edit_vector_field.edit_vx_func(equation1)
         edit_vector_field.edit_vy_func(equation2)
         importlib.reload(vitx)
